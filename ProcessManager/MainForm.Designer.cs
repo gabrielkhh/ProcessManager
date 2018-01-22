@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.listViewProcesses = new System.Windows.Forms.ListView();
-            this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colImgName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colPID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSchedule = new System.Windows.Forms.Button();
+            this.colDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colMemWrkingSet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,31 +44,35 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewProcesses.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colName,
-            this.colPID});
+            this.colImgName,
+            this.colDescription,
+            this.colPID,
+            this.colMemWrkingSet});
+            this.listViewProcesses.FullRowSelect = true;
             this.listViewProcesses.Location = new System.Drawing.Point(0, 39);
+            this.listViewProcesses.MultiSelect = false;
             this.listViewProcesses.Name = "listViewProcesses";
-            this.listViewProcesses.Size = new System.Drawing.Size(394, 285);
+            this.listViewProcesses.Size = new System.Drawing.Size(592, 285);
             this.listViewProcesses.TabIndex = 0;
             this.listViewProcesses.UseCompatibleStateImageBehavior = false;
             this.listViewProcesses.View = System.Windows.Forms.View.Details;
             // 
-            // colName
+            // colImgName
             // 
-            this.colName.Text = "Process Name";
-            this.colName.Width = 170;
+            this.colImgName.Text = "Image Name";
+            this.colImgName.Width = 100;
             // 
             // colPID
             // 
             this.colPID.Text = "PID";
-            this.colPID.Width = 168;
+            this.colPID.Width = 80;
             // 
             // flowLayoutPanel
             // 
             this.flowLayoutPanel.Controls.Add(this.btnSchedule);
             this.flowLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(394, 39);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(592, 39);
             this.flowLayoutPanel.TabIndex = 1;
             // 
             // btnSchedule
@@ -79,11 +85,21 @@
             this.btnSchedule.Text = "Schedule";
             this.btnSchedule.UseVisualStyleBackColor = true;
             // 
+            // colDescription
+            // 
+            this.colDescription.Text = "Description";
+            this.colDescription.Width = 180;
+            // 
+            // colMemWrkingSet
+            // 
+            this.colMemWrkingSet.Text = "Memory (Working Set)";
+            this.colMemWrkingSet.Width = 80;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 325);
+            this.ClientSize = new System.Drawing.Size(592, 325);
             this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.listViewProcesses);
             this.Name = "MainForm";
@@ -98,8 +114,10 @@
         private System.Windows.Forms.ListView listViewProcesses;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.Button btnSchedule;
-        private System.Windows.Forms.ColumnHeader colName;
+        private System.Windows.Forms.ColumnHeader colImgName;
         private System.Windows.Forms.ColumnHeader colPID;
+        private System.Windows.Forms.ColumnHeader colDescription;
+        private System.Windows.Forms.ColumnHeader colMemWrkingSet;
     }
 }
 

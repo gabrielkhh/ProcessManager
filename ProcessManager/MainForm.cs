@@ -27,18 +27,29 @@ namespace ProcessManager
             Process[] localAll = Process.GetProcesses();
             ListViewItem item;
             ListViewItem.ListViewSubItem[] subItems;
+            long constant = 1024;
             foreach (var process in localAll)
             {
-                //var driveImage = listViewImageList.Images.IndexOfKey(attr);
-                item = new ListViewItem(process.ProcessName);
-                subItems = new ListViewItem.ListViewSubItem[]
-                          {new ListViewItem.ListViewSubItem(item, process.Id.ToString())
-                              //new ListViewItem.ListViewSubItem(item,
-                              //dirInfo.LastAccessTime.ToShortDateString())
-                          };
-                item.SubItems.AddRange(subItems);
-                //item.Tag = dirInfo;
-                listViewProcesses.Items.Add(item);
+                try
+                {
+                    var fileVersion = process.MainModule.FileVersionInfo;
+                    //var driveImage = listViewImageList.Images.IndexOfKey(attr);
+                    item = new ListViewItem(process.MainModule.ModuleName);
+                    subItems = new ListViewItem.ListViewSubItem[]
+                              {new ListViewItem.ListViewSubItem(item, fileVersion.FileDescription),
+                                  new ListViewItem.ListViewSubItem(item, process.Id.ToString()),
+                                  new ListViewItem.ListViewSubItem(item, (process.WorkingSet64/constant).ToString() + " K")
+                              };
+                    item.SubItems.AddRange(subItems);
+                    //item.Tag = dirInfo;
+                    listViewProcesses.Items.Add(item);
+                    
+                }
+                catch
+                {
+
+                }
+                
             }
         }
     }
