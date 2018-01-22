@@ -28,26 +28,36 @@ namespace ProcessManager
             ListViewItem item;
             ListViewItem.ListViewSubItem[] subItems;
             long constant = 1024;
+            var status = "";
             foreach (var process in localAll)
             {
                 try
                 {
+                    if (process.Responding)
+                    {
+                        status = "Running";
+                    }
+                    else
+                    {
+                        status = "Not Responding";
+                    }
+
                     var fileVersion = process.MainModule.FileVersionInfo;
                     //var driveImage = listViewImageList.Images.IndexOfKey(attr);
                     item = new ListViewItem(process.MainModule.ModuleName);
                     subItems = new ListViewItem.ListViewSubItem[]
                               {new ListViewItem.ListViewSubItem(item, fileVersion.FileDescription),
                                   new ListViewItem.ListViewSubItem(item, process.Id.ToString()),
-                                  new ListViewItem.ListViewSubItem(item, (process.WorkingSet64/constant).ToString() + " K")
+                                  new ListViewItem.ListViewSubItem(item, (process.WorkingSet64/constant).ToString() + " K"),
+                                  new ListViewItem.ListViewSubItem(item, status)
                               };
                     item.SubItems.AddRange(subItems);
-                    //item.Tag = dirInfo;
                     listViewProcesses.Items.Add(item);
                     
                 }
                 catch
                 {
-
+                    //Omit processes where we do not have permission to read their details.
                 }
                 
             }
