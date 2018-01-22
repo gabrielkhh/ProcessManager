@@ -1,0 +1,18 @@
+c:\users\gabriel\documents\visual studio 2017\Projects\ProcessManager\ProcessManager\bin\Debug\ProcessManager.exe
+c:\users\gabriel\documents\visual studio 2017\Projects\ProcessManager\ProcessManager\bin\Debug\ProcessManager.pdb
+c:\users\gabriel\documents\visual studio 2017\Projects\ProcessManager\ProcessManager\obj\Debug\ProcessManager.csprojResolveAssemblyReference.cache
+c:\users\gabriel\documents\visual studio 2017\Projects\ProcessManager\ProcessManager\obj\Debug\ProcessManager.Properties.Resources.resources
+c:\users\gabriel\documents\visual studio 2017\Projects\ProcessManager\ProcessManager\obj\Debug\ProcessManager.csproj.GenerateResource.Cache
+c:\users\gabriel\documents\visual studio 2017\Projects\ProcessManager\ProcessManager\obj\Debug\ProcessManager.csproj.CoreCompileInputs.cache
+c:\users\gabriel\documents\visual studio 2017\Projects\ProcessManager\ProcessManager\obj\Debug\ProcessManager.exe
+c:\users\gabriel\documents\visual studio 2017\Projects\ProcessManager\ProcessManager\obj\Debug\ProcessManager.pdb
+c:\users\gabriel\documents\visual studio 2017\Projects\ProcessManager\ProcessManager\obj\Debug\ProcessManager.MainForm.resources
+D:\Internship Files\ProcessManagerApp\ProcessManager\ProcessManager\bin\Debug\ProcessManager.exe
+D:\Internship Files\ProcessManagerApp\ProcessManager\ProcessManager\bin\Debug\ProcessManager.pdb
+D:\Internship Files\ProcessManagerApp\ProcessManager\ProcessManager\obj\Debug\ProcessManager.csprojResolveAssemblyReference.cache
+D:\Internship Files\ProcessManagerApp\ProcessManager\ProcessManager\obj\Debug\ProcessManager.MainForm.resources
+D:\Internship Files\ProcessManagerApp\ProcessManager\ProcessManager\obj\Debug\ProcessManager.Properties.Resources.resources
+D:\Internship Files\ProcessManagerApp\ProcessManager\ProcessManager\obj\Debug\ProcessManager.csproj.GenerateResource.Cache
+D:\Internship Files\ProcessManagerApp\ProcessManager\ProcessManager\obj\Debug\ProcessManager.csproj.CoreCompileInputs.cache
+D:\Internship Files\ProcessManagerApp\ProcessManager\ProcessManager\obj\Debug\ProcessManager.exe
+D:\Internship Files\ProcessManagerApp\ProcessManager\ProcessManager\obj\Debug\ProcessManager.pdb
